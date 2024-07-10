@@ -10,7 +10,6 @@ import org.junit.jupiter.api.BeforeEach;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.junit.jupiter.api.extension.ExtendWith;
-import org.mockito.InjectMocks;
 import org.mockito.Mock;
 import org.mockito.junit.jupiter.MockitoExtension;
 import org.springframework.beans.factory.annotation.Autowired;
@@ -106,16 +105,16 @@ class MainTest {
         vegetable.setId(2L);
         vegetable.setName("Carrot");
         vegetable.setPrice(20.0);
-        vegetable.setGrownOnTree(false);
+        vegetable.setIsGrownOnTree(false);
 
         assertEquals(2L, vegetable.getId());
         assertEquals("Carrot", vegetable.getName());
         assertEquals(20.0, vegetable.getPrice());
-        assertFalse(vegetable.isGrownOnTree());
+        assertFalse(vegetable.getIsGrownOnTree());
 
 
-        vegetable.setGrownOnTree(true);
-        assertTrue(vegetable.isGrownOnTree());
+        vegetable.setIsGrownOnTree(true);
+        assertTrue(vegetable.getIsGrownOnTree());
     }
 
     @Test
